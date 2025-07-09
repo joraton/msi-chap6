@@ -57,25 +57,25 @@ export default function SectionBlock({
       whileHover={{ scale: 1.02, y: -2 }}
       className="group"
     >
-      <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4 flex-1">
+      <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:justify-between">
+          <div className="flex items-center gap-3 sm:gap-4 flex-1 w-full sm:w-auto">
             {/* Icon */}
-            <div className={`${bgColor} p-3 rounded-full`}>
-              <Icon className={`h-6 w-6 ${color}`} />
+            <div className={`${bgColor} p-2 sm:p-3 rounded-full flex-shrink-0`}>
+              <Icon className={`h-5 w-5 sm:h-6 sm:w-6 ${color}`} />
             </div>
 
             {/* Content */}
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-gray-900 mb-1">{title}</h3>
-              <p className="text-gray-600">{description}</p>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 leading-tight">{title}</h3>
+              <p className="text-sm sm:text-base text-gray-600 line-clamp-2">{description}</p>
             </div>
           </div>
 
           {/* Button */}
           <Link
             href={href}
-            className={`${getButtonColor(color)} hover:opacity-90 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 group-hover:scale-105`}
+            className={`${getButtonColor(color)} hover:opacity-90 text-white px-4 sm:px-6 py-2 rounded-lg font-medium transition-all duration-200 group-hover:scale-105 text-sm sm:text-base w-full sm:w-auto text-center flex-shrink-0`}
           >
             Commencer
           </Link>
